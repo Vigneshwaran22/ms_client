@@ -1,0 +1,35 @@
+<h5 style="margin-top: 5%;">Recipe Detail</h5>
+<br>
+<div class="row">
+    <div class="col-4">
+        <table class="table">
+            <tr>
+                <th>Title</th>
+                <td>{{product.title}}</td>
+            </tr>
+            <tr>
+                <th>List of Tags</th>
+                <td>
+                    <span *ngFor="let tag of product.tags">
+                        <button class="btn btn-sm btn-outline-primary me-2">{{tag}}</button>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{product.description}}s</td>
+            </tr>
+            <tr>
+                <th>Chef Name</th>
+                <td>{{product.chef}}</td>
+            </tr>
+        </table>
+    </div>
+    <div class="col-8">
+        <img [src]="product.image" style="height: 100%; width: 50%;" class="me-2">
+    </div>
+</div>
+<br>
+<div class="row" style="justify-content: center;">
+    <button class="btn btn-primary" [routerLink]="['/products']">Back to list</button>
+</div>

@@ -1,0 +1,20 @@
+<h5 style="margin-top: 5%;">Recipes</h5>
+<br>
+<div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Image</th>
+                <th scope="col">View</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of products; index as i">
+                <td> {{ product.title }} </td>
+                <td> <img [src]="product.image" class="me-2" style="width: 150; height: 100px;;"> </td>
+                <td> <Button class="btn-primary" (click)="view_detail(product.id)">View</Button> </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
